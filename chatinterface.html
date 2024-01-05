@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chat page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    .wrapper3{
+      background: #fff;
+      width: 450px;
+      border-radius: 16px;
+      box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                  0 32px 64px -48px rgba(0,0,0,0.5);
+    }
+    .users{
+      padding: 25px 30px;
+    }
+    .wrapper3 img{
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .users .search{
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .users .search input{
+      height: 42px;
+      width: calc(100% - 50px);
+      border: 1px solid #ccc;
+      padding: 0 13px;
+      font-size: 16px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+    .users .search button{
+      width: 47px;
+      height: 42px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #333;
+      cursor: pointer;
+      font-size: 17px;
+      border-radius: 0 5px 5px 0; 
+    }
+    .users-list{
+      max-height: calc(100% - 50px);
+      overflow-y: auto;
+    }
+    :is(.chat-box, .users-list)::-webkit-scrollbar{
+      width: 0px;
+    }
+    .users-list a{
+      display: flex;
+      margin-bottom: 15px;
+      page-break-after: 10px;
+      align-items: center;
+      padding-bottom: 20px;
+      justify-content: space-between;
+      text-decoration: none;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .users-list a:last-child{
+      border: none;
+      margin-bottom: 0px;
+    }
+    .users-list a .content img{
+      height: 60px;
+      width: 60px;
+    }
+    .chat-area header{
+      display: flex;
+    }
+    .chat-area header img{
+      height: 60px;
+      width: 60px;
+      margin: 0 15px;
+      margin-top: 5px;
+    }
+    .chat-area header .back-icon{
+      margin-left: 25px;
+      margin-top: 25px;
+      font-size: 16px;
+      color: #333;
+    }
+    .chat-area .details p{
+      margin-top: 0px;
+      color: #67676a;
+    }
+    .users-list a .status-dot{
+      font-size: 12px;
+      color: #468669;
+    }
+    .users-list a .status-dot.offline{
+      color: #ccc;
+    }
+    :is(.users-list) .content{
+      display: flex;
+      align-items: center;
+    }
+    :is(.chat-area) .details{
+      margin-left: 0px;
+      margin-top: 16px;
+      color: #000;
+    }
+    :is(.chat-area) .details span{
+      margin-top: 0px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .chat-box{
+      height: 500px;
+      background: #f7f7f7;
+      padding: 10px 30px 20px 30px;
+      overflow-y: auto;
+    }
+    .chat-box .chat{
+      margin: 15px 0;
+    }
+    .chat-box .chat p{
+      word-wrap: break-word;
+      padding: 8px 16px;
+      box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                  0 16px 16px -16px rgb(0 0 0 / 10%);
+    }
+    .chat-box .outgoing{
+      display: flex;
+      align-items: flex-end;
+    }
+    .outgoing .details{
+      margin-left: auto;
+      margin-right: 10px;
+      max-width: calc(100% - 130px);
+    }
+    .outgoing .details p{
+      margin-right: 5px;
+      margin-top: 0px;
+      background: #333;
+      color: #fff;
+      border-radius: 18px 18px 0 18px;
+    }
+    .chat-box .outgoing img{
+      height: 35px;
+      width: 35px;
+    }
+    .chat-box .incoming img{
+      height: 35px;
+      width: 35px
+    }
+    .chat-box .incoming{
+      display: flex;
+      align-items: flex-end;
+    }
+    .incoming .details{
+      margin-right: auto;
+      margin-left: 10px;
+      max-width: calc(100% - 130px);
+    }
+    .chat-box .incoming p{
+      background: #fff;
+      color: #333;
+      border-radius: 18px 18px 18px 0;
+    }
+    .chat-area .typing-area{
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .typing-area input{
+      height: 45px;
+      width: calc(100% - 58px);
+      font-size: 17px;
+      border: 1px solid #ccc;
+      padding: 0 13px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+    .typing-area button{
+      width: 55px;
+      border: none;
+      outline: none;
+      border-radius: 0 5px 5px 0;
+      color: #fff;
+      background: black;
+      cursor: pointer;
+      font-size: 19px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="chat-area">
+      <header>
+        <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+        <img src="images/profile.jpg" alt="No profile picture">
+        <div class="details">
+          <span>Danne Sandeep</span>
+          <p>Active now</p>
+        </div>
+      </header>
+
+      <div class="chat-box">
+        <div class="chat outgoing">
+          <div class="details">
+            <p>Hey there how are you.</p>
+          </div>
+          <img src="images/profile.jpg" alt="No dp">
+        </div>
+        <div class="chat incoming">
+          <img src="images/profile.png" alt="No dp">
+          <div class="details">
+            <p>I am fine. what about you?</p>
+          </div>
+        </div>
+        <div class="chat outgoing">
+          <div class="details">
+            <p>Hey there how are you.</p>
+          </div>
+          <img src="images/profile.jpg" alt="No dp">
+        </div>
+        <div class="chat incoming">
+          <img src="images/profile.png" alt="No dp">
+          <div class="details">
+            <p>I am fine. what about you?</p>
+          </div>
+        </div>
+        <div class="chat outgoing">
+          <div class="details">
+            <p>Hey there how are you.</p>
+          </div>
+          <img src="images/profile.jpg" alt="No dp">
+        </div>
+        <div class="chat incoming">
+          <img src="images/profile.png" alt="No dp">
+          <div class="details">
+            <p>I am fine. what about you?</p>
+          </div>
+        </div>
+        <div class="chat outgoing">
+          <div class="details">
+            <p>Hey there how are you.</p>
+          </div>
+          <img src="images/profile.jpg" alt="No dp">
+        </div>
+        <div class="chat incoming">
+          <img src="images/profile.png" alt="No dp">
+          <div class="details">
+            <p>I am fine. what about you?</p>
+          </div>
+        </div>
+        <div class="chat outgoing">
+          <div class="details">
+            <p>Hey there how are you.</p>
+          </div>
+          <img src="images/profile.jpg" alt="No dp">
+        </div>
+        <div class="chat incoming">
+          <img src="images/profile.png" alt="No dp">
+          <div class="details">
+            <p>I am fine. what about you?</p>
+          </div>
+        </div>
+      </div>
+      <form action="#" class="typing-area">
+        <input type="text" placeholder="Type a message here...">
+        <button><i class="fab fa-telegram-plane"></i></button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

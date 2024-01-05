@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-black">
+  <div class="container-fluid">
+    <p class="navbar-brand mx-5 my-0" href="#" style = " background-image: linear-gradient(135deg, #ff00c7 0%, #64ecff 100%);background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: 30px;">
+  <b>
+      I<span class>dea</span>
+      P<span>oint</span>
+  </b>
+  </p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="afterlogin.html" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="margin-right: 5px;">About US</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <img src="Images/img/profile.jpeg" alt="Profile Photo" class="dropdown-photo">
+        <button class="dropbtn">
+<?php
+if (!isset($_SESSION['email'])) {
+    header('location: login.php');
+    exit();
+}
+
+$user_email = $_SESSION['email'];
+$getUserInfoQuery = "SELECT name FROM signup WHERE email = '$user_email'";
+    $userInfoResult = mysqli_query($con, $getUserInfoQuery);
+
+    if ($userInfoResult && $userInfo = mysqli_fetch_assoc($userInfoResult)) {
+        echo '<p style="margin: auto;">' . $userInfo['name'] . '</p>';
+    } else {
+        // Handle error or default name
+        echo '<p style="margin: auto;">User</p>';
+    }
+?></button>
+        <div id="myDropdown" class="dropdown-content">
+           <a href="#">Profile</a>
+           <a href="#">Settings</a>
+           <a href="login.php" style="background-color: red;  border-radius: 0px 0px 15px 15px;">Logout</a>
+        </div>
+       </div>
+    </div>
+  </div>
+</nav>

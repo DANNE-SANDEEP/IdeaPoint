@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  background: #000;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.info {
+  display: flex;
+  gap: 0;
+  background-color: #000;
+}
+.black{
+height: 100%;
+width: 75%;
+background-color:black;
+text-align: center;
+margin-left: 0%;
+transition: transform 0.7s ease-in-out;
+}
+.white{
+height: 623px;
+width: 40%;
+background-color: #b7b6b6;
+text-align: center;
+margin-right: 0%;
+border: 2px solid black;
+border-radius: 20px;
+transition: transform 0.7s ease-in-out;
+}
+/* hi */
+
+.white .learn-more {
+  margin-top: 50%;
+}
+.black .title {
+  margin-top: 9%;
+}
+.cards{
+display: flex;
+gap: 10px;
+padding: 50px;
+}
+button {
+position: relative;
+display: inline-block;
+cursor: pointer;
+outline: none;
+border: 0;
+vertical-align: middle;
+text-decoration: none;
+background: transparent;
+padding: 0;
+font-size: inherit;
+font-family: inherit;
+}
+
+button.learn-more {
+width: 12rem;
+height: auto;
+}
+
+button.learn-more .circle {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: relative;
+display: block;
+margin: 0;
+width: 3rem;
+height: 3rem;
+background: #282936;
+border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+left: 0.625rem;
+width: 1.125rem;
+height: 0.125rem;
+background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+position: absolute;
+content: "";
+top: -0.29rem;
+right: 0.0625rem;
+width: 0.625rem;
+height: 0.625rem;
+border-top: 0.125rem solid #fff;
+border-right: 0.125rem solid #fff;
+transform: rotate(45deg);
+}
+button.learn-more .button-text {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 0.75rem 0;
+margin: 0 0 0 1.85rem;
+color: #282936;
+font-weight: 700;
+line-height: 1.6;
+text-align: center;
+text-transform: uppercase;
+}
+
+button:hover .circle {
+width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+background: #fff;
+transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+color: #fff;
+}
+
+p span {
+font-size: 0px;
+transition: all 0.4s ease-out;
+}
+
+p:hover span {
+font-size: 20px;
+background-color: transparent;
+
+/* Create the gradient. */
+background-image: linear-gradient(135deg, #ff00c7 0%, #64ecff 100%);
+
+/* Set the background size and repeat properties. */
+background-size: 100%;
+background-repeat: repeat;
+
+/* Use the text as a mask for the background. */
+/* This will show the gradient as a text color rather than element bg. */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-background-clip: text;
+-moz-text-fill-color: transparent;
+}
+@media (max-width: 768px) {
+  /* Responsive styles for screens up to 768px wide */
+  .white,
+  .black {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .white {
+    padding: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+@media (max-width: 576px) {
+  /* Responsive styles for screens up to 576px wide */
+  .signup,
+  .login-box {
+    width: 80%;
+  }
+}
+.card-link{
+background-color: #282936;
+color: #fff;
+border-radius: 10em;
+font-size: 17px;
+font-weight: 600;
+padding: 0.5em 2em;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+border: 2px solid #282936;
+box-shadow: 0 0 0 0 black;
+}
+
+.card-link:hover {
+transform: translateY(-4px) translateX(-2px);
+box-shadow: 2px 5px 0 0 white;
+};
+
+.card-link:active {
+transform: translateY(2px) translateX(1px);
+box-shadow: 0 0 0 0 white;
+};
+
+
+
+.butt button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+ 
+ .butt button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+ 
+ .butt button:hover {
+  color: #e8e8e8;
+ }
+ 
+ .butt button:hover::before {
+  width: 100%;
+ }
+
+ .cssbuttons-io-button {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #39373a;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: rgb(0, 0, 0);
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #39363c;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #ffffff;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}

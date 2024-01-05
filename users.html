@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Click Example</title>
+    <style>
+        .right {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .wrapper3 {
+            float: left;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<div class="right" id="userList">
+    <p class="user" onclick="showUserInfo('DANNE SANDEEP')">DANNE SANDEEP</p>
+    <p class="user" onclick="showUserInfo('John Doe')">John Doe</p>
+    <!-- Add more users as needed -->
+</div>
+
+<div class="wrapper3" id="userInfo">
+    <p id="userInfoText">Default User Info (DANNE SANDEEP)</p>
+</div>
+
+<script>
+    function showUserInfo(username) {
+        // Update the content in the wrapper3 based on the clicked user
+        document.getElementById('userInfoText').innerText = 'User Info for ' + username;
+    }
+</script>
+
+</body>
+</html>
