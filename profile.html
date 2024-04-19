@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Point | Profile</title>
+    <!-- bootstrap start-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap End -->
+
+    <!-- Google fonts start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google fonts end -->
+
+    <!-- Font Awesome start-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome End -->
+
+    <!-- Custom files start -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Custom files end -->
+
+    
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="home.html" class="logo"><img src="assets/images/logo.png" alt="logo"></a>
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search..">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="home.html"><i class="bi bi-house-door-fill"></i><span>Home</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-user-group"></i><span>My Network</span></a></li>
+                <li><a href="#"><i class="bi bi-lightbulb-fill"></i><span>Ideas</span></a></li>
+                <li><a href="#"><i class="bi bi-telegram"></i><span>Messaging</span></a></li>
+                <li><a href="#"><i class="bi bi-bell-fill"></i><span>Notification</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right" onclick="toggleMenu()">
+            <div class="online">
+            <img src="assets/images/user.png" alt="user" class="nav-profile-img">
+            </div>
+        </div>
+
+        <!-- Profile drop down menu start-->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="assets/images/user.png" alt="profile">
+                    <div>
+                        <h3>Sandeep Danne</h3>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/feedback.png" alt="feedback">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/setting.png" alt="feedback">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/help.png" alt="feedback">
+                    <p>Help</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/display.png" alt="feedback">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/logout.png" alt="feedback">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile drop down menu ends -->
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container">
+        <div class="profile-main">
+            <div class="profile-container">
+                <img src="assets/images/cover.png" width="100%" style="border-radius: 10px 10px 0 0;">
+                <div class="profile-container-inner">
+                    <img src="assets/images/user.png" alt="user" class="profile-pic">
+                    <h1>Sandeep Danne</h1>
+                    <b>Web Developer | Machine Learning Intern</b>
+                    <p>Hyderabad, India &middot; <a href="#">Contact info</a></p>
+
+                    <div class="mutual-connection">
+                        <img src="assets/images/user1.jpg">
+                        <span>1 mutual connection: Sandeep Danne</span>
+                    </div>
+                    <div class="profile-btn">
+                        <a href="#" class="primary-btn"><img src="assets/images/connect.png">Connnect</a>
+                        <a href="#"><img src="assets/images/chat.png">Message</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-description">
+                <h2>About</h2>
+                <p>The success of every websites depends on search engine optimisation and digital marketing strategy. If you are on first page of all major search engines then you are ahead among your competitors.</p>
+                <a href="#" class="see-more-link">See more...</a>
+            </div>
+
+            <div class="profile-description">
+                <h2>Experience</h2>
+                <div class="profile-desc-row">
+                    <img src="assets/images/microsoft.png" alt="microsoft logo">
+                    <div>
+                        <h3>Lead Front-End Developer</h3>
+                        <b>Microsoft &middot; Full-Time</b>
+                        <b>Feb 2021 - Present &middot; 1.5 years</b>
+                        <p>Computer programming is the process of performing a particular computation, usually by designing and building an executable computer program.</p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="assets/images/slack.png" alt="slack logo">
+                    <div>
+                        <h3>Full Stack Developer</h3>
+                        <b>Slack &middot; Full-Time</b>
+                        <b>June 2018 - Jan 2021 &middot; 2.6 years</b>
+                        <p>Computer programming is the process of performing a particular computation, usually by designing and building an executable computer program.</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="experience-link">Show all 7 Experiences <img src="assets/images/right-arrow.png" alt="right arrow"></a>
+
+            </div>
+
+
+            <div class="profile-description">
+                <h2>Education</h2>
+                <div class="profile-desc-row">
+                    <img src="assets/images/stanford.png" alt="">
+                    <div>
+                        <h3>Stanford University</h3>
+                        <b>BSEE, Computer Science Engineering</b>
+                        <b>2018-2022</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="assets/images/north.png" alt="">
+                    <div>
+                        <h3>Northwestern University</h3>
+                        <b>Computer Science</b>
+                        <b>2015-2018</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="assets/images/mit.png" alt="">
+                    <div>
+                        <h3>Harvard University</h3>
+                        <b>Senior Hight School</b>
+                        <b>2005 - 2015</b>
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="profile-description">
+                <h2>Skills</h2>
+                <a href="#" class="skills-btn">Leadership</a>
+                <a href="#" class="skills-btn">Web Design</a>
+                <a href="#" class="skills-btn">Developement</a>
+                <a href="#" class="skills-btn">Communication</a>
+                <a href="#" class="skills-btn">UI/UX</a>
+                <a href="#" class="skills-btn">Planning</a>
+                <a href="#" class="skills-btn">Coding</a>
+                <a href="#" class="skills-btn">JavaScript</a>
+                <a href="#" class="skills-btn">Python</a>
+                <a href="#" class="skills-btn">Enterprenuorship</a>
+            </div>
+
+            <div class="profile-description">
+                <h2>Languages</h2>
+                <a href="#" class="language-btn">English</a>
+                <a href="#" class="language-btn">Hindi</a>
+                <a href="#" class="language-btn">Telugu</a>
+            </div>
+
+        </div>
+
+        <!-- Profile Sidebar -->
+        <div class="profile-sidebar">
+            <div class="sidebar-ad">
+                <small>Ad</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="assets/images/user.png" alt="user">
+                    <img src="assets/images/apple.png" alt="apple logo">
+                </div>
+                <b>Brand and Demand in Apple</b>
+                <a href="#" class="ad-link">Learn more</a>
+            </div>
+
+            <div class="sidebar-people">
+                <h3>People you may know</h3>
+                <div class="sidebar-people-row">
+                    <img src="assets/images/user1.jpg">
+                    <div>
+                        <h2>Mahammed Ijas</h2>
+                        <p>Head of Marketing &middot; Alibaba</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-people-row">
+                    <img src="assets/images/user2.jpg">
+                    <div>
+                        <h2>Sandeep Danne</h2>
+                        <p>MD &middot; Google</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-people-row">
+                    <img src="assets/images/user1.jpg">
+                    <div>
+                        <h2>Mahammed Ijas</h2>
+                        <p>Head of Marketing at Alibaba</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="profile-footer">
+        <div class="sidebar-useful-links">
+            <a href="#">About</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertising</a>
+            <a href="#">Get the App</a>
+            <a href="#">More</a>
+
+            <div class="copyright-msg">
+                <img src="assets/images/logo.png" alt="logo">
+                <p>IdeaPoint &#169; 2024. All rights reserved</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

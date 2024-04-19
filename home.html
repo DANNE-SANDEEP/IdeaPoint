@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Point | Home</title>
+    <!-- bootstrap start-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap End -->
+
+    <!-- Google fonts start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google fonts end -->
+
+    <!-- Font Awesome start-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome End -->
+
+    <!-- Custom files start -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Custom files end -->
+
+    
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="home.html" class="logo"><img src="assets/images/logo.png" alt="logo"></a>
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search..">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="home.html" class="active-link"><i class="bi bi-house-door-fill"></i><span>Home</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-user-group"></i><span>My Network</span></a></li>
+                <li><a href="#"><i class="bi bi-lightbulb-fill"></i><span>Ideas</span></a></li>
+                <li><a href="messages.html"><i class="bi bi-telegram"></i><span>Messaging</span></a></li>
+                <li><a onclick="toggleNotification()"><i class="bi bi-bell-fill"></i><span>Notification</span></a></li>
+                <div class="notification-menu-wrap" id="NotificationMenu">
+                    <div class="profile-menu">
+                        <div class="user-info">
+                            <img src="assets/images/user.png" alt="profile">
+                            <div>
+                                <h4>Sandeep Danne has posted a new post</h4>
+                                <a href="profile.html">View Post</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="user-info">
+                            <img src="assets/images/user.png" alt="profile">
+                            <div>
+                                <h5>Sandeep Danne</h5>
+                                <a href="profile.html">See your profile</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="user-info">
+                            <img src="assets/images/user.png" alt="profile">
+                            <div>
+                                <h5>Sandeep Danne</h5>
+                                <a href="profile.html">See your profile</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="user-info">
+                            <img src="assets/images/user.png" alt="profile">
+                            <div>
+                                <h5>Sandeep Danne</h5>
+                                <a href="profile.html">See your profile</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="navbar-right" onclick="toggleMenu()">
+            <div class="online">
+            <img src="assets/images/user.png" alt="user" class="nav-profile-img">
+            </div>
+        </div>
+
+        <!-- Profile drop down menu start-->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="assets/images/user.png" alt="profile">
+                    <div>
+                        <h3>Sandeep Danne</h3>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/feedback.png" alt="feedback">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/setting.png" alt="feedback">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/help.png" alt="feedback">
+                    <p>Help</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/display.png" alt="feedback">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="assets/images/logout.png" alt="feedback">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile drop down menu ends -->
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container">
+        <!-- Left Sidebar Start -->
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="assets/images/cover.png" alt="cover image" width="100%" style="border-radius: 10px 10px 0px 0px;">
+                <div class="sidebar-profile-info">
+                    <img src="assets/images/user.png" alt="logo">
+                    <h1>Sandeep Danne</h1>
+                    <h3>Web Developer</h3>
+                    <ul>
+                        <li>Your Profile Views<span>80</span></li>
+                        <li>Your Post Views<span>800</span></li>
+                        <li>Your Connections<span>200</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><i class="fa-solid fa-bookmark" style="color: rgb(1, 112, 247);"></i> Saved</a>
+                    <a href="#"><i class='fas fa-crown' style="color: rgb(255, 193, 24);"></i> Try Premium</a>
+                </div>
+            </div>
+
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3>RECENT</h3>
+                <a href="#"><i class="bi bi-clock-history"></i> Web Developement</a>
+                <a href="#"><i class="bi bi-clock-history"></i> User Interface</a>
+                <a href="#"><i class="bi bi-clock-history"></i> Machine Learning</a>
+                <a href="#"><i class="bi bi-clock-history"></i> Learn Online</a>
+                <a href="#"><i class="bi bi-clock-history"></i> Group Learning</a>
+                <a href="#"><i class="bi bi-clock-history"></i> Code Better</a>
+                <h3>GROUPS</h3>
+                <a href="#"><i class="bi bi-people-fill"></i> Web Developers</a>
+                <a href="#"><i class="bi bi-people-fill"></i> JavaScript Learners</a>
+                <a href="#"><i class="bi bi-people-fill"></i> Coding Buddies</a>
+                <a href="#"><i class="bi bi-people-fill"></i> Python Learning</a>
+                <a href="#"><i class="bi bi-people-fill"></i> React Learners</a>
+                <a href="#"><i class="bi bi-people-fill"></i> Backend With Java</a>
+                <h3>HASHTAGS</h3>
+                <a href="#"><i class="bi bi-hash"></i> webdevelopment</a>
+                <a href="#"><i class="bi bi-hash"></i> UI</a>
+                <a href="#"><i class="bi bi-hash"></i> python</a>
+                <div class="discover-more-link">
+                    <a href="#">Discover more</a>
+                </div>
+            </div>
+
+            <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+        </div>
+        <!-- Left Sidebar end -->
+
+        <!-- Main content start -->
+        <div class="main-content">
+
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="assets/images/user.png" alt="logo">
+                    <textarea rows="2" placeholder="Generate a 'Idea'"></textarea>
+                </div>
+
+                <div class="create-post-links">
+                    <li><i class="bi bi-images"></i> Photo</li>
+                    <li><i class="bi bi-camera-video"></i> Video</li>
+                    <li><i class="bi bi-calendar4-event"></i> Event</li>
+                    <li>Generate</li>
+                </div>
+            </div>
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <i class="bi bi-arrow-down"></i></span></p>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="assets/images/user1.jpg" alt="">
+                    <div>
+                        <h1>Mohammed Ijas</h1>
+                        <small>Student | Lovely Professional University</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>An Operating system based on artificial Intelligence. We can control the OS by hand guestures. Also its more efficient to do more tasks simultaneously.</p>
+                <img src="assets/images/post1.jpg" alt="post image" width="100%">
+
+                <div class="post-stats">
+                    <div>
+                        <img src="assets/images/thumbsup.png" alt="">
+                        <img src="assets/images/love.png" alt="">
+                        <img src="assets/images/clap.png" alt="">
+                        <span class="liked-users">Abhinav Mishra and 75 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares &middot; 6 Collabs</span>
+                    </div>
+                </div>
+
+
+                <div class="post-activity">
+                    <div class="post-activity-link">
+                        <img src="assets/images/collab.jpg" class="post-activity-user-icon">
+                        <span>Collab</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="assets/images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="assets/images/comment.png">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="assets/images/share.png">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="assets/images/send.png">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Main content end -->
+
+        <!-- Right sidebar start -->
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <i class="bi bi-fire"></i>
+                <h3>Trending Ideas</h3>
+                <a href="#">Operating System based on AI</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="#">Plant Detection using ML</a>
+                <span>1d ago &middot; 10,934 readers</span>
+                
+                <a href="#">Infinite Scooty</a>
+                <span>1d ago &middot; 10,934 readers</span>
+                
+                <a href="#">Solar Stickers</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="#">Hyper Loop</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="#" class="read-more-link">Read more</a>
+            </div>
+
+            <div class="sidebar-ad">
+                <small>Ad</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="assets/images/user.png" alt="user">
+                    <img src="assets/images/apple.png" alt="apple logo">
+                </div>
+                <b>Brand and Demand in Apple</b>
+                <a href="#" class="ad-link">Learn more</a>
+            </div>
+
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src="assets/images/logo.png" alt="logo">
+                    <p>IdeaPoint &#169; 2024. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        <!-- Right sidebar end -->
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
