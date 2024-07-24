@@ -26,3 +26,30 @@ links.forEach(link => {
         forms.classList.toggle("show-signup");
     })
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const emailField = document.querySelector('input[type="email"]');
+    const passwordField = document.querySelector('input[type="password"]');
+    const errorMsg = document.createElement('div');
+    errorMsg.style.color = 'red';
+    errorMsg.style.marginTop = '10px';
+
+    form.appendChild(errorMsg);
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form from submitting
+
+        const defaultUsername = 'sandeep_danne';
+        const defaultPassword = 'admin';
+
+        const enteredUsername = emailField.value;
+        const enteredPassword = passwordField.value;
+
+        if (enteredUsername === defaultUsername && enteredPassword === defaultPassword) {
+            window.location.href = 'nextpage.html'; // Redirect to the next page
+        } else {
+            errorMsg.textContent = 'Wrong credentials. Please try again.';
+        }
+    });
+});
